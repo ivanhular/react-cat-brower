@@ -26,7 +26,7 @@ The API used on this project is [thecatapi.com](https://docs.thecatapi.com).
 ##### Clone the project
 
 ```
-git clone react-cat-browser
+git clone https://github.com/ivanhular/react-cat-brower.git
 ```
 
 ##### Install dependencies
