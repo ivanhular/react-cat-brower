@@ -17,12 +17,10 @@ const BreedScreen = ({ match, history }) => {
     if (!detail.id || match?.params.id !== detail?.id) {
       catBreedDetail(match.params.id)(dispatch)
     }
-    // catBreedDetail(match.params.id)(dispatch)
   }, [match, detail, dispatch])
 
   return (
     <div class='breed__page'>
-      {console.log(detail)}
       <Card>
         <Card.Header>
           <Button onClick={goBack} variant='primary'>

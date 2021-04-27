@@ -27,8 +27,6 @@ export const catBreedList = () => async (dispatch) => {
       config
     )
 
-    // console.log(data)
-
     dispatch({ type: CAT_BREEDS_LIST_SUCCESS, payload: data })
   } catch (error) {
     const message = error?.response.data?.message
@@ -65,8 +63,6 @@ export const catBreedImages = (id) => async (dispatch, page) => {
       'https://api.thecatapi.com/v1/images/search',
       config
     )
-
-    console.log(headers)
 
     dispatch({
       type: CAT_BREEDS_IMAGES_SUCCESS,
@@ -108,15 +104,10 @@ export const loadMoreImages = () => async (
       config
     )
 
-    // console.table(data)
-    // console.table(headers)
-    // console.table(imageList)
     const appendData = data.filter(
       (newItem) =>
         imageList.findIndex((prevData) => prevData.id === newItem.id) === -1
     )
-
-    console.table(appendData, page)
 
     dispatch({ type: CAT_BREEDS_IMAGES_LOAD_MORE, payload: appendData })
   } catch (error) {
@@ -145,8 +136,6 @@ export const catBreedDetail = (id) => async (dispatch) => {
       `https://api.thecatapi.com/v1/images/${id}`,
       config
     )
-
-    console.log(data)
 
     dispatch({ type: CAT_BREEDS_DETAIL_SUCCESS, payload: data })
   } catch (error) {

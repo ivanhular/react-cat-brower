@@ -34,7 +34,6 @@ const HomeScreen = ({ location }) => {
       })
       setCurrentPage(currentPage + 1)
     }
-    console.log(selectedBreed)
   }
 
   useEffect(() => {
