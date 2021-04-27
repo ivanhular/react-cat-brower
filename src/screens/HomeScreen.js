@@ -54,7 +54,9 @@ const HomeScreen = ({ location }) => {
               <option>Select Breed</option>
               {breeds?.length > 0 &&
                 breeds.map((breed) => (
-                  <option value={breed.id}>{breed.name}</option>
+                  <option value={breed.id} key={breed.id}>
+                    {breed.name}
+                  </option>
                 ))}
             </Form.Control>
           </Form.Group>

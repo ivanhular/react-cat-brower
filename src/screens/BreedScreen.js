@@ -20,7 +20,7 @@ const BreedScreen = ({ match, history }) => {
   }, [match, detail, dispatch])
 
   return (
-    <div class='breed__page'>
+    <div className='breed__page'>
       <Card>
         <Card.Header>
           <Button onClick={goBack} variant='primary'>
